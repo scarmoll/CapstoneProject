@@ -9,4 +9,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
+    <string name="begin">Laten we beginnen!</string>
+    <string name="bedankt">Bedankt voor het downloaden van deze app. Door middel van deze app kan u onderdelen bestellen om uw Seiko 5 aan te passen</string>
+
+    <string name="home">Home</string>
+    <string name="winkelwagen">Winkelwagen</string>
+    <string name="info">Info</string>
+
 </resources>
