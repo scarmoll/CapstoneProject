@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.capstone.Fragments.PartsFragmentDirections
 import com.example.capstone.R
 import kotlinx.android.synthetic.main.item_part.view.*
 
@@ -32,7 +33,11 @@ class PartAdapter(private val part: List<Part>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         holder.itemView.setOnClickListener(View.OnClickListener { view ->
-            view.findNavController().navigate(R.id.IndividualPartFragment)
+
+            val action =
+                PartsFragmentDirections.actionPartsFragmentToIndividualPartsFragment(position)
+            view.findNavController().navigate(action)
+//            view.findNavController().navigate(R.id.IndividualPartFragment)
         })
 
         holder.databind(part[position])

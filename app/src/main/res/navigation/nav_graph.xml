@@ -22,6 +22,10 @@
         tools:layout="@layout/fragment_parts">
 
         <action
+            android:id="@+id/action_PartsFragment_to_IndividualPartsFragment"
+            app:destination="@id/IndividualPartFragment" />
+
+        <action
             android:id="@+id/action_PartsFragment_to_WelcomeFragment"
             app:destination="@id/WelcomeFragment" />
     </fragment>
@@ -39,5 +43,9 @@
     <fragment
         android:id="@+id/IndividualPartFragment"
         android:name="com.example.capstone.Fragments.IndividualPartFragment"
-        tools:layout="@layout/fragment_individual_part" />
+        tools:layout="@layout/fragment_individual_part" >
+        <argument
+            android:name="partPosition"
+            app:argType="integer" />
+    </fragment>
 </navigation>
