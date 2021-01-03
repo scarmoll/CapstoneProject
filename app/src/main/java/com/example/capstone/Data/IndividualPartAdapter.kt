@@ -1,14 +1,19 @@
 package com.example.capstone.Data
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.capstone.Fragments.IndividualPartFragment
 import com.example.capstone.R
 import kotlinx.android.synthetic.main.item_individual_part.view.*
 
 
-class IndividualPartAdapter(private val individualPart: List<IndividualPart>) :
+class IndividualPartAdapter(
+    private val individualPart: List<IndividualPart>,
+    private val clickListener: (IndividualPart) -> Unit
+) :
     RecyclerView.Adapter<IndividualPartAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -16,6 +21,12 @@ class IndividualPartAdapter(private val individualPart: List<IndividualPart>) :
         fun databind(individualPart: IndividualPart) {
             itemView.tvIndividualPartName.text = individualPart.name
             itemView.tvIndividualPrice.text = individualPart.price.toString()
+
+            itemView.setOnClickListener(View.OnClickListener {
+                clickListener(
+                    individualPart
+                )
+            })
         }
     }
 
@@ -28,10 +39,6 @@ class IndividualPartAdapter(private val individualPart: List<IndividualPart>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
-        val name = holder.itemView.tvIndividualPartName.text.toString()
-        val price = holder.itemView.tvIndividualPrice.text.toString()
-
         holder.databind(individualPart[position])
     }
 

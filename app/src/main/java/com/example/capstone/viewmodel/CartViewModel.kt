@@ -17,15 +17,10 @@ class CartViewModel(application: Application) : AndroidViewModel(application) {
     val error = MutableLiveData<String>()
     val success = MutableLiveData<Boolean>()
 
-    fun insertPart(name: String, price: Double) {
-        val newPart = IndividualPart(
-            name = name,
-            price = price
-        )
-
+    fun insertPart(individualPart: IndividualPart) {
         mainScope.launch {
             withContext(Dispatchers.IO) {
-                cartRepository.insertPart(newPart)
+                cartRepository.insertPart(individualPart)
             }
             success.value = true
         }
