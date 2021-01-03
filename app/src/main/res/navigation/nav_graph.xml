@@ -43,7 +43,7 @@
     <fragment
         android:id="@+id/IndividualPartFragment"
         android:name="com.example.capstone.Fragments.IndividualPartFragment"
-        tools:layout="@layout/fragment_individual_part" >
+        tools:layout="@layout/fragment_individual_parts" >
         <argument
             android:name="partPosition"
             app:argType="integer" />

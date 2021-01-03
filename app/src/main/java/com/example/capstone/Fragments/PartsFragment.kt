@@ -38,6 +38,8 @@ class PartsFragment : Fragment() {
         rvPartsList.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         rvPartsList.adapter = partListAdapter
 
+        partList.clear()
+
         for (i in Part.PART_NAME.indices) {
             partList.add(Part(Part.PART_NAME[i], Part.PART_DESCRIPTION[i]))
         }

@@ -1,6 +1,5 @@
 package com.example.capstone.Data
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +31,8 @@ class PartAdapter(private val part: List<Part>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
+        holder.databind(part[position])
+
         holder.itemView.setOnClickListener(View.OnClickListener { view ->
 
             val action =
@@ -40,7 +41,6 @@ class PartAdapter(private val part: List<Part>) :
 //            view.findNavController().navigate(R.id.IndividualPartFragment)
         })
 
-        holder.databind(part[position])
     }
 
     override fun getItemCount(): Int {
