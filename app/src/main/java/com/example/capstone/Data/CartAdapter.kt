@@ -19,7 +19,7 @@ class CartAdapter(
             itemView.tvCartItemName.text = individualPart.name
             itemView.tvCartItemPrice.text = individualPart.price.toString()
 
-            itemView.setOnClickListener(View.OnClickListener {
+            itemView.btnDeleteFromCart.setOnClickListener(View.OnClickListener {
                 clickListener(
                     individualPart
                 )
