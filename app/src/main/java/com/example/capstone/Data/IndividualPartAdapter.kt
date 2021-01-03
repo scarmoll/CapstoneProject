@@ -28,12 +28,9 @@ class IndividualPartAdapter(private val individualPart: List<IndividualPart>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-//        holder.itemView.setOnClickListener(View.OnClickListener { view ->
-//            val action =
-//                PartsFragmentDirections.actionPartsFragmentToIndividualPartsFragment(position)
-//            view.findNavController().navigate(action)
-////            view.findNavController().navigate(R.id.IndividualPartFragment)
-//        })
+
+        val name = holder.itemView.tvIndividualPartName.text.toString()
+        val price = holder.itemView.tvIndividualPrice.text.toString()
 
         holder.databind(individualPart[position])
     }
