@@ -35,4 +35,9 @@
         android:id="@+id/CartFragment"
         android:name="com.example.capstone.Fragments.CartFragment"
         tools:layout="@layout/fragment_cart" />
+
+    <fragment
+        android:id="@+id/IndividualPartFragment"
+        android:name="com.example.capstone.Fragments.IndividualPartFragment"
+        tools:layout="@layout/fragment_individual_part" />
 </navigation>

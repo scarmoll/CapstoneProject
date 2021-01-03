@@ -49,6 +49,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        toolbar.setNavigationOnClickListener {
+            super.onBackPressed()
+        }
+
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
@@ -63,16 +67,27 @@ class MainActivity : AppCompatActivity() {
                 toolbar.title = "Welkom"
                 bottom_navigation.setVisibility(View.GONE)
                 fab.hide()
+                toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.PartsFragment)) {
                 toolbar.title = "Selecteer Onderdelen"
                 bottom_navigation.setVisibility(View.VISIBLE)
                 fab.hide()
+                toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.InfoFragment)) {
                 toolbar.title = "Info"
+                bottom_navigation.setVisibility(View.VISIBLE)
                 fab.hide()
+                toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.CartFragment)) {
                 toolbar.title = "Winkelwagen"
+                bottom_navigation.setVisibility(View.VISIBLE)
                 fab.show()
+                toolbar.navigationIcon = null
+            } else if (destination.id in arrayOf(R.id.IndividualPartFragment)) {
+                toolbar.title = "Selecteer Onderdeel"
+                bottom_navigation.setVisibility(View.GONE)
+                fab.hide()
+                toolbar.setNavigationIcon(R.drawable.arrow_back)
             }
         }
     }
