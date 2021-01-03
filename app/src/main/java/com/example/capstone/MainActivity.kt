@@ -1,12 +1,8 @@
 package com.example.capstone
 
 import android.os.Bundle
-import android.util.Log
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -53,9 +49,10 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
+            navController.navigate(
+                R.id.PaymentFragment
+            )
         }
 
         destinationListener()
@@ -85,6 +82,11 @@ class MainActivity : AppCompatActivity() {
                 toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.IndividualPartFragment)) {
                 toolbar.title = "Selecteer Onderdeel"
+                bottom_navigation.setVisibility(View.GONE)
+                fab.hide()
+                toolbar.setNavigationIcon(R.drawable.arrow_back)
+            } else if (destination.id in arrayOf(R.id.PaymentFragment)) {
+                toolbar.title = "Afrekenen"
                 bottom_navigation.setVisibility(View.GONE)
                 fab.hide()
                 toolbar.setNavigationIcon(R.drawable.arrow_back)

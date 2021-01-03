@@ -41,6 +41,11 @@
         tools:layout="@layout/fragment_cart" />
 
     <fragment
+        android:id="@+id/PaymentFragment"
+        android:name="com.example.capstone.Fragments.PaymentFragment"
+        tools:layout="@layout/fragment_payment" />
+
+    <fragment
         android:id="@+id/IndividualPartFragment"
         android:name="com.example.capstone.Fragments.IndividualPartFragment"
         tools:layout="@layout/fragment_individual_parts" >
