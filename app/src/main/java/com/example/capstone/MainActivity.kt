@@ -36,6 +36,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.page_3 -> {
+                    navController.navigate(
+                        R.id.InfoFragment
+                    )
                     true
                 }
 

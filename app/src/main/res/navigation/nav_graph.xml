@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/WelcomeFragment"
-        android:name="com.example.capstone.WelcomeFragment"
+        android:name="com.example.capstone.Fragments.WelcomeFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_welcome">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/PartsFragment"
-        android:name="com.example.capstone.PartsFragment"
+        android:name="com.example.capstone.Fragments.PartsFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_parts">
 
@@ -25,4 +25,9 @@
             android:id="@+id/action_PartsFragment_to_WelcomeFragment"
             app:destination="@id/WelcomeFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/InfoFragment"
+        android:name="com.example.capstone.Fragments.InfoFragment"
+        tools:layout="@layout/fragment_info" />
 </navigation>

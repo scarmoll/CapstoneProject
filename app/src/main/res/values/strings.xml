@@ -17,4 +17,7 @@
     <string name="winkelwagen">Winkelwagen</string>
     <string name="info">Info</string>
 
+
+    <string name="info_text">Uitleg over hoe de app precies werkt komt hier te staan!</string>
+
 </resources>
