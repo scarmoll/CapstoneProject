@@ -7,7 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.R
 import kotlinx.android.synthetic.main.item_cart_item.view.*
 
-class CartAdapter(private val gameList: List<IndividualPart>) :
+class CartAdapter(
+    private val gameList: List<IndividualPart>,
+    private val clickListener: (IndividualPart) -> Unit
+) :
     RecyclerView.Adapter<CartAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
@@ -15,6 +18,12 @@ class CartAdapter(private val gameList: List<IndividualPart>) :
         fun databind(individualPart: IndividualPart) {
             itemView.tvCartItemName.text = individualPart.name
             itemView.tvCartItemPrice.text = individualPart.price.toString()
+
+            itemView.setOnClickListener(View.OnClickListener {
+                clickListener(
+                    individualPart
+                )
+            })
         }
     }
 

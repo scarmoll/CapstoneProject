@@ -18,7 +18,9 @@ import kotlinx.android.synthetic.main.fragment_cart.*
 class CartFragment : Fragment() {
 
     private val cartItemList = arrayListOf<IndividualPart>()
-    private val cartItemListAdapter = CartAdapter(cartItemList)
+    private val cartItemListAdapter = CartAdapter(cartItemList) { individualPart: IndividualPart ->
+        itemClicked(individualPart)
+    }
     private val viewModel: CartViewModel by viewModels()
 
     override fun onCreateView(
@@ -34,6 +36,10 @@ class CartFragment : Fragment() {
 
         initViews()
         observeCart()
+    }
+
+    private fun itemClicked(individualPart: IndividualPart) {
+        viewModel.deletePart(individualPart)
     }
 
     private fun observeCart() {

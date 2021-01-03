@@ -1,12 +1,11 @@
 package com.example.capstone.Data
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.capstone.Fragments.IndividualPartFragment
 import com.example.capstone.R
+import kotlinx.android.synthetic.main.item_cart_item.view.*
 import kotlinx.android.synthetic.main.item_individual_part.view.*
 
 
@@ -22,7 +21,7 @@ class IndividualPartAdapter(
             itemView.tvIndividualPartName.text = individualPart.name
             itemView.tvIndividualPrice.text = individualPart.price.toString()
 
-            itemView.setOnClickListener(View.OnClickListener {
+            itemView.btnDeleteFromCart.setOnClickListener(View.OnClickListener {
                 clickListener(
                     individualPart
                 )
