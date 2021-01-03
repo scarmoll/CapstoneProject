@@ -1,8 +1,21 @@
 package com.example.capstone.Data
 
+import androidx.room.ColumnInfo
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "CartTable")
 data class IndividualPart(
+
+    @ColumnInfo(name = "name")
     var name: String,
-    var price: Double
+
+    @ColumnInfo(name = "price")
+    var price: Double,
+
+    @PrimaryKey(autoGenerate = true)
+    @ColumnInfo(name = "id")
+    var id: Long? = null
 ) {
     companion object {
         val STRAP_NAME = arrayOf(

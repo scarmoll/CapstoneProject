@@ -1,18 +1,15 @@
 package com.example.capstone.Fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.Data.IndividualPart
 import com.example.capstone.Data.IndividualPartAdapter
-import com.example.capstone.Data.Part
 import com.example.capstone.R
 import kotlinx.android.synthetic.main.fragment_individual_parts.*
 
@@ -41,9 +38,6 @@ class IndividualPartFragment : Fragment() {
     }
 
     private fun initViews(position: Int) {
-
-        val NAME: String
-
         rvIndividualPartsList.layoutManager =
             LinearLayoutManager(context, RecyclerView.VERTICAL, false)
         rvIndividualPartsList.adapter = individualPartListAdapter
