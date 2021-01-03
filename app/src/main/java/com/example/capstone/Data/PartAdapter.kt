@@ -1,5 +1,6 @@
 package com.example.capstone.Data
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,11 @@ class PartAdapter(private val part: List<Part>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+        holder.itemView.setOnClickListener(View.OnClickListener {
+            Log.i("joe", "You clicked on item with index $position")
+        })
+
         holder.databind(part[position])
     }
 

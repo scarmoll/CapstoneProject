@@ -30,4 +30,9 @@
         android:id="@+id/InfoFragment"
         android:name="com.example.capstone.Fragments.InfoFragment"
         tools:layout="@layout/fragment_info" />
+
+    <fragment
+        android:id="@+id/CartFragment"
+        android:name="com.example.capstone.Fragments.CartFragment"
+        tools:layout="@layout/fragment_cart" />
 </navigation>

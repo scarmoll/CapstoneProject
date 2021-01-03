@@ -32,6 +32,9 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 R.id.page_2 -> {
+                    navController.navigate(
+                        R.id.CartFragment
+                    )
                     true
                 }
 
@@ -63,23 +66,30 @@ class MainActivity : AppCompatActivity() {
             } else if (destination.id in arrayOf(R.id.PartsFragment)) {
                 toolbar.title = "Selecteer Onderdelen"
                 bottom_navigation.setVisibility(View.VISIBLE)
+                fab.hide()
+            } else if (destination.id in arrayOf(R.id.InfoFragment)) {
+                toolbar.title = "Info"
+                fab.hide()
+            } else if (destination.id in arrayOf(R.id.CartFragment)) {
+                toolbar.title = "Winkelwagen"
+                fab.show()
             }
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
-        }
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        menuInflater.inflate(R.menu.menu_main, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        return when (item.itemId) {
+//            R.id.action_settings -> true
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
 }
