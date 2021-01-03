@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
             if (destination.id in arrayOf(R.id.WelcomeFragment)) {
                 toolbar.title = "Welkom"
                 bottom_navigation.setVisibility(View.GONE)
+                fab.hide()
             } else if (destination.id in arrayOf(R.id.PartsFragment)) {
                 toolbar.title = "Selecteer Onderdelen"
                 bottom_navigation.setVisibility(View.VISIBLE)

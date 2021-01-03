@@ -7,15 +7,23 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.capstone.Data.Part
+import com.example.capstone.Data.PartAdapter
+import kotlinx.android.synthetic.main.fragment_parts.*
 
 /**
  * A simple [Fragment] subclass as the second destination in the navigation.
  */
 class PartsFragment : Fragment() {
 
+    private val partList = arrayListOf<Part>()
+    private val partListAdapter = PartAdapter(partList)
+
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_parts, container, false)
@@ -24,8 +32,17 @@ class PartsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.button_second).setOnClickListener {
-            findNavController().navigate(R.id.action_PartsFragment_to_WelcomeFragment)
+        initViews()
+    }
+
+    fun initViews() {
+        rvPartsList.layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        rvPartsList.adapter = partListAdapter
+
+        for (i in Part.PART_NAME.indices) {
+            partList.add(Part(Part.PART_NAME[i], Part.PART_DESCRIPTION[i]))
         }
+
+        partListAdapter.notifyDataSetChanged()
     }
 }
