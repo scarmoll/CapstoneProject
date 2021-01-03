@@ -16,14 +16,24 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="10dp"
         android:text="Chapter ring"
+        android:textColor="@android:color/black"
         android:textSize="16sp" />
 
     <TextView
         android:id="@+id/tvDescription"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
         android:layout_marginTop="40dp"
         android:text="U heeft nog geen chapter ring geselecteerd"
         android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="33dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_forward_ios_24"
+        app:tint="@android:color/black" />
 </androidx.cardview.widget.CardView>
