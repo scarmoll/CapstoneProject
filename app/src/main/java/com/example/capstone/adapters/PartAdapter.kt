@@ -19,6 +19,9 @@ class PartAdapter(private val part: List<Part>) :
         fun databind(part: Part) {
             itemView.tvPartName.text = part.name
             itemView.tvDescription.text = part.description
+            itemView.ivPartImage.setImageResource(
+                part.imageResId
+            )
         }
     }
 

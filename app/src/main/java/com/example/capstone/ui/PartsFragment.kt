@@ -41,7 +41,7 @@ class PartsFragment : Fragment() {
         partList.clear()
 
         for (i in Part.PART_NAME.indices) {
-            partList.add(Part(Part.PART_NAME[i], Part.PART_DESCRIPTION[i]))
+            partList.add(Part(Part.PART_NAME[i], Part.PART_DESCRIPTION[i], Part.PART_RES_DRAWABLE_IDS[i]))
         }
 
         partListAdapter.notifyDataSetChanged()
