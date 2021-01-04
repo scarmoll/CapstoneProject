@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.capstone.R
 import com.example.capstone.viewmodel.CartViewModel
 import kotlinx.android.synthetic.main.fragment_payment.*
@@ -15,6 +16,7 @@ import kotlinx.android.synthetic.main.fragment_payment.*
 class PaymentFragment : Fragment() {
 
     private val viewModel: CartViewModel by viewModels()
+    val args: PaymentFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,13 +27,13 @@ class PaymentFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        val duration = Toast.LENGTH_SHORT
+        tvPaymentTotal.text = args.totalPrice
 
         paymentFAB.setOnClickListener {
             viewModel.clearCart()
             view.findNavController().navigate(R.id.PaymentCompleteFragment)
         }
-
-        val duration = Toast.LENGTH_SHORT
 
         btnAbnAmro.setOnClickListener {
             val toast = Toast.makeText(context, "U heeft ABN Amro geselecteerd", duration)

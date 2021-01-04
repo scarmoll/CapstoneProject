@@ -27,5 +27,6 @@
     <string name="abn_amro_logo">Abn Amro logo</string>
     <string name="pay_pal_logo">Pay Pal logo</string>
     <string name="rabobank_logo">Rabobank logo</string>
+    <string name="price_default">0.00</string>
 
 </resources>

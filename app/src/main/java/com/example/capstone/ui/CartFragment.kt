@@ -38,7 +38,15 @@ class CartFragment : Fragment() {
 
         cartFab.setOnClickListener {
             if (!isCartEmpty()) {
-                view.findNavController().navigate(R.id.PaymentFragment)
+                val action = CartFragmentDirections.actionCartFragmentToPaymentFragment(
+                    "€ ${
+                        "%.2f".format(
+                            getCartTotal()
+                        ).toString()
+                    }"
+                )
+
+                view.findNavController().navigate(action)
             } else {
                 val text = "Cart cannot be empty!"
                 val duration = Toast.LENGTH_SHORT
@@ -74,6 +82,18 @@ class CartFragment : Fragment() {
 
     private fun isCartEmpty(): Boolean {
         return cartItemListAdapter.itemCount == 0
+    }
+
+    private fun getCartTotal(): Double {
+        var total = 0.0
+        viewModel.cart.observe(viewLifecycleOwner, Observer { cart ->
+
+            for (item in cartItemList) {
+                total += item.price
+            }
+
+        })
+        return total
     }
 
     fun initViews() {
