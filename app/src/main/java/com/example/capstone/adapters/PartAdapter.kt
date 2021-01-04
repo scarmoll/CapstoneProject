@@ -1,12 +1,13 @@
-package com.example.capstone.Data
+package com.example.capstone.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.capstone.Fragments.PartsFragmentDirections
+import com.example.capstone.ui.PartsFragmentDirections
 import com.example.capstone.R
+import com.example.capstone.model.Part
 import kotlinx.android.synthetic.main.item_part.view.*
 
 

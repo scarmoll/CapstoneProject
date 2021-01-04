@@ -3,10 +3,9 @@ package com.example.capstone.viewmodel
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
-import com.example.capstone.Data.IndividualPart
+import com.example.capstone.model.IndividualPart
 import com.example.capstone.repository.CartRepository
 import kotlinx.coroutines.*
-import java.util.*
 
 class CartViewModel(application: Application) : AndroidViewModel(application) {
 

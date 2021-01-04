@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.capstone.Data.IndividualPart
+import com.example.capstone.model.IndividualPart
 import com.example.capstone.dao.CartDao
 
 @Database(entities = [IndividualPart::class], version = 1, exportSchema = false)

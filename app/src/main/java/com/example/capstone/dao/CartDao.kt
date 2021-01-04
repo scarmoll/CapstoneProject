@@ -2,7 +2,7 @@ package com.example.capstone.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.capstone.Data.IndividualPart
+import com.example.capstone.model.IndividualPart
 
 @Dao
 interface CartDao {

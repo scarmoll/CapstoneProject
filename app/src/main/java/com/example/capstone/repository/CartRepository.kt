@@ -2,7 +2,7 @@ package com.example.capstone.repository
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import com.example.capstone.Data.IndividualPart
+import com.example.capstone.model.IndividualPart
 import com.example.capstone.dao.CartDao
 import com.example.capstone.database.CartRoomDatabase
 

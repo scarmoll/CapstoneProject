@@ -1,4 +1,4 @@
-package com.example.capstone.Fragments
+package com.example.capstone.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.capstone.Data.Part
-import com.example.capstone.Data.PartAdapter
+import com.example.capstone.model.Part
+import com.example.capstone.adapters.PartAdapter
 import com.example.capstone.R
 import kotlinx.android.synthetic.main.fragment_parts.*
 

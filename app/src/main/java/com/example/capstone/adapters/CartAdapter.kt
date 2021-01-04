@@ -1,10 +1,11 @@
-package com.example.capstone.Data
+package com.example.capstone.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.R
+import com.example.capstone.model.IndividualPart
 import kotlinx.android.synthetic.main.item_cart_item.view.*
 
 class CartAdapter(

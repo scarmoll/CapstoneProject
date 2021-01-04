@@ -1,4 +1,4 @@
-package com.example.capstone.Data
+package com.example.capstone.model
 
 data class Part(
     var name: String,
