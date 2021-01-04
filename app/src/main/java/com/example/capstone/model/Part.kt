@@ -18,15 +18,15 @@ data class Part(
         )
 
         val PART_DESCRIPTION = arrayOf(
-            "Description 1",
-            "Description 2",
-            "Description 3",
-            "Description 4",
-            "Description 5",
-            "Description 6",
-            "Description 7",
-            "Description 8",
-            "Description 9"
+            "Hier kan kiezen uit verschillende bandjes",
+            "Hier kan kiezen uit verschillende bezels",
+            "Hier kan kiezen uit verschillende bezel insert",
+            "Hier kan kiezen uit verschillende chapter rings",
+            "Hier kan kiezen uit verschillende soorten glas",
+            "Hier kan kiezen uit verschillende kronen",
+            "Hier kan kiezen uit verschillende kasten",
+            "Hier kan kiezen uit verschillende wijzerplaten",
+            "Hier kan kiezen uit verschillende wijzers"
         )
     }
 }
