@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.capstone.adapters.CartAdapter
@@ -34,6 +36,18 @@ class CartFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        cartFab.setOnClickListener {
+            if (!isCartEmpty()) {
+                view.findNavController().navigate(R.id.PaymentFragment)
+            } else {
+                val text = "Cart cannot be empty!"
+                val duration = Toast.LENGTH_SHORT
+
+                val toast = Toast.makeText(context, text, duration)
+                toast.show()
+            }
+        }
+
         initViews()
         observeCart()
     }
@@ -56,6 +70,10 @@ class CartFragment : Fragment() {
 
             tvCartTotal.text = "€ ${"%.2f".format(total).toString()}"
         })
+    }
+
+    private fun isCartEmpty(): Boolean {
+        return cartItemListAdapter.itemCount == 0
     }
 
     fun initViews() {

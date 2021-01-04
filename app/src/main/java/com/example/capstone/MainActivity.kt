@@ -49,12 +49,6 @@ class MainActivity : AppCompatActivity() {
             super.onBackPressed()
         }
 
-        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener {
-            navController.navigate(
-                R.id.PaymentFragment
-            )
-        }
-
         destinationListener()
     }
 
@@ -63,32 +57,26 @@ class MainActivity : AppCompatActivity() {
             if (destination.id in arrayOf(R.id.WelcomeFragment)) {
                 toolbar.title = "Welkom"
                 bottom_navigation.setVisibility(View.GONE)
-                fab.hide()
                 toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.PartsFragment)) {
                 toolbar.title = "Selecteer Onderdelen"
                 bottom_navigation.setVisibility(View.VISIBLE)
-                fab.hide()
                 toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.InfoFragment)) {
                 toolbar.title = "Info"
                 bottom_navigation.setVisibility(View.VISIBLE)
-                fab.hide()
                 toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.CartFragment)) {
                 toolbar.title = "Winkelwagen"
                 bottom_navigation.setVisibility(View.VISIBLE)
-                fab.show()
                 toolbar.navigationIcon = null
             } else if (destination.id in arrayOf(R.id.IndividualPartFragment)) {
                 toolbar.title = "Selecteer Onderdeel"
                 bottom_navigation.setVisibility(View.GONE)
-                fab.hide()
                 toolbar.setNavigationIcon(R.drawable.arrow_back)
             } else if (destination.id in arrayOf(R.id.PaymentFragment)) {
                 toolbar.title = "Afrekenen"
                 bottom_navigation.setVisibility(View.GONE)
-                fab.hide()
                 toolbar.setNavigationIcon(R.drawable.arrow_back)
             }
         }
