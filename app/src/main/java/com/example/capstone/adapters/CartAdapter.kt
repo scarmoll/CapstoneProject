@@ -19,6 +19,9 @@ class CartAdapter(
         fun databind(individualPart: IndividualPart) {
             itemView.tvCartItemName.text = individualPart.name
             itemView.tvCartItemPrice.text = individualPart.price.toString()
+            itemView.ivCartItemImage.setImageResource(
+                individualPart.imageResId
+            )
 
             itemView.btnDeleteFromCart.setOnClickListener(View.OnClickListener {
                 clickListener(

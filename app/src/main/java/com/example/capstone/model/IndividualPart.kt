@@ -16,8 +16,7 @@ data class IndividualPart(
     var price: Double,
 
     @ColumnInfo(name = "image_res_id")
-    @DrawableRes
-    var imageResId: Int,
+    @DrawableRes var imageResId: Int,
 
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
