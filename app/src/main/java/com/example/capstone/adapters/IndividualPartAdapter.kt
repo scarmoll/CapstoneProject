@@ -20,6 +20,9 @@ class IndividualPartAdapter(
         fun databind(individualPart: IndividualPart) {
             itemView.tvIndividualPartName.text = individualPart.name
             itemView.tvIndividualPrice.text = individualPart.price.toString()
+            itemView.ivIndividualPartImage.setImageResource(
+                individualPart.imageResId
+            )
 
             itemView.setOnClickListener(View.OnClickListener {
                 clickListener(

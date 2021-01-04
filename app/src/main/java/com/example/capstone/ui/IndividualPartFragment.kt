@@ -59,7 +59,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.STRAP_NAME[i],
-                            IndividualPart.STRAP_PRICE[i]
+                            IndividualPart.STRAP_PRICE[i],
+                            IndividualPart.STRAP_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -70,7 +71,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.BEZEL_NAME[i],
-                            IndividualPart.BEZEL_PRICE[i]
+                            IndividualPart.BEZEL_PRICE[i],
+                            IndividualPart.BEZEL_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -81,7 +83,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.INSERT_NAME[i],
-                            IndividualPart.INSERT_PRICE[i]
+                            IndividualPart.INSERT_PRICE[i],
+                            IndividualPart.INSERT_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -92,7 +95,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.CHAPTER_RING_NAME[i],
-                            IndividualPart.CHAPTER_RING_PRICE[i]
+                            IndividualPart.CHAPTER_RING_PRICE[i],
+                            IndividualPart.CHAPTER_RING_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -103,7 +107,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.GLASS_NAME[i],
-                            IndividualPart.GLASS_PRICE[i]
+                            IndividualPart.GLASS_PRICE[i],
+                            IndividualPart.GLASS_RING_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -114,7 +119,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.CROWN_NAME[i],
-                            IndividualPart.CROWN_PRICE[i]
+                            IndividualPart.CROWN_PRICE[i],
+                            IndividualPart.CROWN_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -125,7 +131,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.CASE_NAME[i],
-                            IndividualPart.CASE_PRICE[i]
+                            IndividualPart.CASE_PRICE[i],
+                            IndividualPart.CASE_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -136,7 +143,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.DIAL_NAME[i],
-                            IndividualPart.DIAL_PRICE[i]
+                            IndividualPart.DIAL_PRICE[i],
+                            IndividualPart.DIAL_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
@@ -147,7 +155,8 @@ class IndividualPartFragment : Fragment() {
                     individualPartList.add(
                         IndividualPart(
                             IndividualPart.HANDS_NAME[i],
-                            IndividualPart.HANDS_PRICE[i]
+                            IndividualPart.HANDS_PRICE[i],
+                            IndividualPart.HANDS_RES_DRAWABLE_IDS[i]
                         )
                     )
                 }
