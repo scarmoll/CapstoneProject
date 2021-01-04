@@ -47,6 +47,14 @@ class CartFragment : Fragment() {
             this@CartFragment.cartItemList.clear()
             this@CartFragment.cartItemList.addAll(cart)
             cartItemListAdapter.notifyDataSetChanged()
+
+            var total = 0.0
+
+            for (item in cartItemList) {
+                total += item.price
+            }
+
+            tvCartTotal.text = "€ ${total.toString()}"
         })
     }
 

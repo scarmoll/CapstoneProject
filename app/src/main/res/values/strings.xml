@@ -24,5 +24,6 @@
     <string name="selecteer_betaalmethode">Selecteer betaalmethode</string>
     <string name="terug_naar_home">Terug naar home</string>
     <string name="order_success">Bedankt voor uw aankoop. Uw bestelling is afgerond.</string>
+    <string name="totaal">Totaal</string>
 
 </resources>

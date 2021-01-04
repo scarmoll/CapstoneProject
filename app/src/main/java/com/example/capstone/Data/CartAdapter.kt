@@ -8,7 +8,7 @@ import com.example.capstone.R
 import kotlinx.android.synthetic.main.item_cart_item.view.*
 
 class CartAdapter(
-    private val gameList: List<IndividualPart>,
+    private val cart: List<IndividualPart>,
     private val clickListener: (IndividualPart) -> Unit
 ) :
     RecyclerView.Adapter<CartAdapter.ViewHolder>() {
@@ -34,10 +34,10 @@ class CartAdapter(
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.databind(gameList[position])
+        viewHolder.databind(cart[position])
     }
 
     override fun getItemCount(): Int {
-        return gameList.size
+        return cart.size
     }
 }
