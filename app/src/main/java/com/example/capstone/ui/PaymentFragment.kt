@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
@@ -28,6 +29,28 @@ class PaymentFragment : Fragment() {
         paymentFAB.setOnClickListener {
             viewModel.clearCart()
             view.findNavController().navigate(R.id.PaymentCompleteFragment)
+        }
+
+        val duration = Toast.LENGTH_SHORT
+
+        btnAbnAmro.setOnClickListener {
+            val toast = Toast.makeText(context, "U heeft ABN Amro geselecteerd", duration)
+            toast.show()
+        }
+
+        btnIng.setOnClickListener {
+            val toast = Toast.makeText(context, "U heeft ING geselecteerd", duration)
+            toast.show()
+        }
+
+        btnPayPal.setOnClickListener {
+            val toast = Toast.makeText(context, "U heeft PayPal geselecteerd", duration)
+            toast.show()
+        }
+
+        btnRabobank.setOnClickListener {
+            val toast = Toast.makeText(context, "U heeft Rabobank geselecteerd", duration)
+            toast.show()
         }
         super.onViewCreated(view, savedInstanceState)
     }

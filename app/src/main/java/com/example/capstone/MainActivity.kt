@@ -78,6 +78,10 @@ class MainActivity : AppCompatActivity() {
                 toolbar.title = "Afrekenen"
                 bottom_navigation.setVisibility(View.GONE)
                 toolbar.setNavigationIcon(R.drawable.arrow_back)
+            } else if (destination.id in arrayOf(R.id.PaymentCompleteFragment)) {
+                toolbar.title = "Betaling voltooid"
+                bottom_navigation.setVisibility(View.GONE)
+                toolbar.navigationIcon = null
             }
         }
     }

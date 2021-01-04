@@ -13,6 +13,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="65dp"
         android:text="@string/selecteer_betaalmethode"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,4 +29,52 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_baseline_shopping_cart_24" />
+
+    <ImageButton
+        android:id="@+id/btnIng"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="150dp"
+        android:contentDescription="@string/ing_logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_ing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnAbnAmro"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="@string/abn_amro_logo"
+        android:scaleType="centerInside"
+        android:src="@drawable/logo_abn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnPayPal"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/pay_pal_logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_paypal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnIng" />
+
+    <ImageButton
+        android:id="@+id/btnRabobank"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:contentDescription="@string/rabobank_logo"
+        android:scaleType="fitCenter"
+        android:src="@drawable/logo_rabo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAbnAmro" />
 </androidx.constraintlayout.widget.ConstraintLayout>

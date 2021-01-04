@@ -19,9 +19,13 @@
 
 
     <string name="info_text">U kunt via het home scherm onderdelen selecteren om in uw winkelwagen te stoppen. Via de balk onderaan uw scherm kunt u in uw winkelwagen komen. Vanaf daar kunt u gerust het totale bedrag zien en eventueel producten uit uw madje verwijderen door op het kruisje te klikken. Hierna kunt u betalen via de groene knop.</string>
-    <string name="selecteer_betaalmethode">Selecteer betaalmethode</string>
+    <string name="selecteer_betaalmethode">Selecteer betaalmethode:</string>
     <string name="terug_naar_home">Terug naar home</string>
     <string name="order_success">Bedankt voor uw aankoop. Uw bestelling is afgerond.</string>
     <string name="totaal">Totaal</string>
+    <string name="ing_logo">Ing logo</string>
+    <string name="abn_amro_logo">Abn Amro logo</string>
+    <string name="pay_pal_logo">Pay Pal logo</string>
+    <string name="rabobank_logo">Rabobank logo</string>
 
 </resources>
