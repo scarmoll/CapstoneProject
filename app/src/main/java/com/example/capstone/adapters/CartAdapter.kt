@@ -17,8 +17,10 @@ class CartAdapter(
     inner class ViewHolder(itemview: View) : RecyclerView.ViewHolder(itemview) {
 
         fun databind(individualPart: IndividualPart) {
+            val roundedPrice = "%.2f".format(individualPart.price)
+
             itemView.tvCartItemName.text = individualPart.name
-            itemView.tvCartItemPrice.text = individualPart.price.toString()
+            itemView.tvCartItemPrice.text = "€ $roundedPrice"
             itemView.ivCartItemImage.setImageResource(
                 individualPart.imageResId
             )

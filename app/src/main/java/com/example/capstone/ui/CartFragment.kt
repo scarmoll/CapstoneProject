@@ -54,7 +54,7 @@ class CartFragment : Fragment() {
                 total += item.price
             }
 
-            tvCartTotal.text = "€ ${total.toString()}"
+            tvCartTotal.text = "€ ${"%.2f".format(total).toString()}"
         })
     }
 

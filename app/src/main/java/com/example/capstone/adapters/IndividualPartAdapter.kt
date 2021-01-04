@@ -18,8 +18,10 @@ class IndividualPartAdapter(
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun databind(individualPart: IndividualPart) {
+            val roundedPrice = "%.2f".format(individualPart.price)
+
             itemView.tvIndividualPartName.text = individualPart.name
-            itemView.tvIndividualPrice.text = individualPart.price.toString()
+            itemView.tvIndividualPrice.text = "€ $roundedPrice"
             itemView.ivIndividualPartImage.setImageResource(
                 individualPart.imageResId
             )
