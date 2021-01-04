@@ -18,9 +18,7 @@
     <string name="info">Info</string>
 
 
-    <string name="info_text">Uitleg over hoe de app precies werkt komt hier te staan!</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_text">U kunt via het home scherm onderdelen selecteren om in uw winkelwagen te stoppen. Via de balk onderaan uw scherm kunt u in uw winkelwagen komen. Vanaf daar kunt u gerust het totale bedrag zien en eventueel producten uit uw madje verwijderen door op het kruisje te klikken. Hierna kunt u betalen via de groene knop.</string>
     <string name="selecteer_betaalmethode">Selecteer betaalmethode</string>
     <string name="terug_naar_home">Terug naar home</string>
     <string name="order_success">Bedankt voor uw aankoop. Uw bestelling is afgerond.</string>
