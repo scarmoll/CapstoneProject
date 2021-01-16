@@ -42,7 +42,7 @@ class CartFragment : Fragment() {
                     "€ ${
                         "%.2f".format(
                             getCartTotal()
-                        ).toString()
+                        )
                     }"
                 )
 
