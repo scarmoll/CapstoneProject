@@ -113,11 +113,13 @@ class PaymentFragment : Fragment() {
                 if (confirmation != null) {
                     val paymentDetails = confirmation.toJSONObject().toString(4)
 
-                    startActivity(
-                        Intent(context, MainActivity::class.java)
-                            .putExtra("PaymentDetails", paymentDetails)
-                            .putExtra("PaymentAmount", amount)
-                    )
+                    val action =
+                        PaymentFragmentDirections.actionPaymentFragmentToPaymentCompleteFragment(
+                            paymentDetails,
+                            amount.toString()
+                        )
+
+                    view?.findNavController()?.navigate(action)
                 }
             } else if (resultCode == Activity.RESULT_CANCELED) {
                 Toast.makeText(context, "Cancel", Toast.LENGTH_SHORT).show()

@@ -51,12 +51,18 @@
         <argument
             android:name="totalPrice"
             app:argType="string" />
+        <action
+            android:id="@+id/action_PaymentFragment_to_PaymentCompleteFragment"
+            app:destination="@id/PaymentCompleteFragment" />
     </fragment>
 
     <fragment
         android:id="@+id/PaymentCompleteFragment"
         android:name="com.example.capstone.ui.PaymentCompleteFragment"
-        tools:layout="@layout/fragment_payment_complete" />
+        tools:layout="@layout/fragment_payment_complete" >
+        <argument android:name="paymentDetails" />
+        <argument android:name="payedAmount" />
+    </fragment>
 
     <fragment
         android:id="@+id/IndividualPartFragment"

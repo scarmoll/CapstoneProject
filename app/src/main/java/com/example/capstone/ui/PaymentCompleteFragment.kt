@@ -1,17 +1,23 @@
 package com.example.capstone.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.capstone.R
+import com.example.capstone.viewmodel.CartViewModel
 import kotlinx.android.synthetic.main.fragment_payment_complete.*
-import org.json.JSONException
 import org.json.JSONObject
 
 class PaymentCompleteFragment : Fragment() {
+
+    private val viewModel: CartViewModel by viewModels()
+    val args: PaymentCompleteFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,17 +28,10 @@ class PaymentCompleteFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        showDetails(JSONObject(args.paymentDetails).getJSONObject("response"), args.payedAmount)
 
-        val intent = activity?.intent
-
-        try {
-            val jsonObject = JSONObject(intent?.getStringExtra("PaymentDetails"))
-            showDetails(
-                jsonObject.getJSONObject("response"),
-                intent?.getStringExtra("PaymentAmount")
-            )
-        } catch (e: JSONException) {
-            e.printStackTrace()
+        if (JSONObject(args.paymentDetails).getJSONObject("response").getString("state") == "approved") {
+            viewModel.clearCart()
         }
 
         btnReturnHome.setOnClickListener {
@@ -44,8 +43,14 @@ class PaymentCompleteFragment : Fragment() {
     }
 
     private fun showDetails(response: JSONObject, paymentAmount: String?) {
-        tvId.text = response.getString("id")
-        tvStatus.text = response.getString("state")
-        tvAmount.text = response.getString(String.format("€%s", paymentAmount))
+//        tvId.text = response.getString("id")
+//        tvStatus.text = response.getString("state")
+//        tvAmount.text = String.format("€%s", paymentAmount)
+
+        Log.i("payment_log", "Payment ID: ${response.getString("id")}")
+        Log.i("payment_log", "Payment Status: ${response.getString("state")}")
+        Log.i(
+            "payment_log", "Total: ${String.format("€%s", paymentAmount)}"
+        )
     }
 }
