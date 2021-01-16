@@ -41,7 +41,6 @@ class PaymentFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val duration = Toast.LENGTH_SHORT
         tvPaymentTotal.text = args.totalPrice
 
         val intent = Intent(context, PayPalService::class.java)
@@ -53,13 +52,13 @@ class PaymentFragment : Fragment() {
             view.findNavController().navigate(R.id.PaymentCompleteFragment)
         }
 
+        val toast = Toast.makeText(context, "Deze betaalmethode is momenteel niet beschikbaar", Toast.LENGTH_SHORT)
+
         btnAbnAmro.setOnClickListener {
-            val toast = Toast.makeText(context, "U heeft ABN Amro geselecteerd", duration)
             toast.show()
         }
 
         btnIng.setOnClickListener {
-            val toast = Toast.makeText(context, "U heeft ING geselecteerd", duration)
             toast.show()
         }
 
@@ -67,13 +66,7 @@ class PaymentFragment : Fragment() {
             processPayment()
         }
 
-//        btnPayPal.setOnClickListener {
-//            val toast = Toast.makeText(context, "U heeft PayPal geselecteerd", duration)
-//            toast.show()
-//        }
-
         btnRabobank.setOnClickListener {
-            val toast = Toast.makeText(context, "U heeft Rabobank geselecteerd", duration)
             toast.show()
         }
         super.onViewCreated(view, savedInstanceState)
