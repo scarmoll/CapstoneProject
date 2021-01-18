@@ -55,58 +55,60 @@ class IndividualPartFragment : Fragment() {
 
         when (position) {
             0 -> {
-                populateIndividualList(IndividualPart.STRAP_NAME, IndividualPart.STRAP_PRICE, IndividualPart.STRAP_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.STRAPS
+                )
             }
 
             1 -> {
-                populateIndividualList(IndividualPart.BEZEL_NAME, IndividualPart.BEZEL_PRICE, IndividualPart.BEZEL_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.BEZELS
+                )
             }
 
             2 -> {
-                populateIndividualList(IndividualPart.INSERT_NAME, IndividualPart.INSERT_PRICE, IndividualPart.INSERT_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.INSERTS
+                )
             }
 
             3 -> {
-                populateIndividualList(IndividualPart.CHAPTER_RING_NAME, IndividualPart.CHAPTER_RING_PRICE, IndividualPart.CHAPTER_RING_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.CHAPTER_RINGS
+                )
             }
 
             4 -> {
-                populateIndividualList(IndividualPart.GLASS_NAME, IndividualPart.GLASS_PRICE, IndividualPart.GLASS_RING_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.GLASS
+                )
             }
 
             5 -> {
-                populateIndividualList(IndividualPart.CROWN_NAME, IndividualPart.CROWN_PRICE, IndividualPart.CROWN_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.CROWNS
+                )
             }
 
             6 -> {
-                populateIndividualList(IndividualPart.CASE_NAME, IndividualPart.CASE_PRICE, IndividualPart.CASE_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.CASES
+                )
             }
 
             7 -> {
-                populateIndividualList(IndividualPart.DIAL_NAME, IndividualPart.DIAL_PRICE, IndividualPart.DIAL_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.DIALS
+                )
             }
 
             8 -> {
-                populateIndividualList(IndividualPart.HANDS_NAME, IndividualPart.HANDS_PRICE, IndividualPart.HANDS_RES_DRAWABLE_IDS)
+                individualPartList.addAll(
+                    IndividualPart.HANDS
+                )
             }
         }
 
         individualPartListAdapter.notifyDataSetChanged()
-    }
-
-    private fun populateIndividualList(
-        partName: Array<String>,
-        partPrice: Array<Double>,
-        partResDrawableIds: Array<Int>
-    ) {
-        for (i in partName.indices) {
-            individualPartList.add(
-                IndividualPart(
-                    partName[i],
-                    partPrice[i],
-                    partResDrawableIds[i]
-                )
-            )
-        }
     }
 }

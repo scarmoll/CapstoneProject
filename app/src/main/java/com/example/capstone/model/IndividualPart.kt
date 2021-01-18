@@ -23,242 +23,291 @@ data class IndividualPart(
     var id: Long? = null
 ) {
     companion object {
-        val STRAP_NAME = arrayOf(
-            "Zwart Rubberen band",
-            "Blauw Rubberen band",
-            "Zwarte NATO band",
-            "Metalen Super-J band",
-            "Zwarte Metalen band"
+        val STRAPS = arrayOf(
+            IndividualPart(
+                "Zwarte bandje",
+                24.99,
+                R.drawable.strap_rubber_black
+            ),
+            IndividualPart(
+                "Blauw Rubberen band",
+                24.99,
+                R.drawable.strap_rubber_blue
+            ),
+            IndividualPart(
+                "Zwarte NATO band",
+                29.99,
+                R.drawable.strap_nato_black
+            ),
+            IndividualPart(
+                "Metalen SUPER-J band",
+                49.99,
+                R.drawable.strap_metal_super_j
+            ),
+            IndividualPart(
+                "Zwart Metalen band",
+                49.99,
+                R.drawable.strap_metal_black
+            ),
         )
 
-        val STRAP_PRICE = arrayOf(
-            24.99,
-            24.99,
-            29.99,
-            49.99,
-            49.99
+        val BEZELS = arrayOf(
+            IndividualPart(
+                "Stalen LX bezel zilver",
+                30.50,
+                R.drawable.bezel_brushed_steel
+            ),
+            IndividualPart(
+                "Stalen LX bezel zwart",
+                30.50,
+                R.drawable.bezel_brushed_black,
+            ),
+            IndividualPart(
+                "Stalen LX bezel brons",
+                30.50,
+                R.drawable.bezel_brushed_bronze,
+            ),
+            IndividualPart(
+                "Stalen Deep Sea zilver",
+                25.50,
+                R.drawable.bezel_deep_sea_silver,
+            ),
+            IndividualPart(
+                "Stalen Deep Sea zwart",
+                25.50,
+                R.drawable.bezel_deep_sea_black,
+            ),
+            IndividualPart(
+                "Stalen Coin Edge zilver",
+                25.50,
+                R.drawable.bezel_coin_edge_silver
+            ),
         )
 
-        val STRAP_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.strap_rubber_black,
-            R.drawable.strap_rubber_blue,
-            R.drawable.strap_nato_black,
-            R.drawable.strap_metal_super_j,
-            R.drawable.strap_metal_black,
+        val INSERTS = arrayOf(
+            IndividualPart(
+                "Yacht Master staal gun metal",
+                37.50,
+                R.drawable.insert_ym_steel_gun_metal,
+            ),
+            IndividualPart(
+                "Yacht Master staal blue",
+                37.50,
+                R.drawable.insert_ym_steel_blue,
+            ),
+            IndividualPart(
+                "Dual Time staal zilver",
+                29.50,
+                R.drawable.insert_dual_time_steel_silver,
+            ),
+            IndividualPart(
+                "Dual Time staal gun metal",
+                29.50,
+                R.drawable.insert_dual_time_steel_gun_metal,
+            ),
+            IndividualPart(
+                "Yacht Master keramisch zwart",
+                37.50,
+                R.drawable.insert_ym_ceramic_black,
+            ),
+            IndividualPart(
+                "Yacht Master keramisch goud",
+                37.50,
+                R.drawable.insert_ym_ceramic_gold,
+            ),
+            IndividualPart(
+                "007 SMP zwart",
+                30.50,
+                R.drawable.insert_007_smp_black
+            ),
         )
 
-        val BEZEL_NAME = arrayOf(
-            "Stalen LX bezel zilver",
-            "Stalen LX bezel zwart",
-            "Stalen LX bezel brons",
-            "Stalen Deep Sea zilver",
-            "Stalen Deep Sea zwart",
-            "Stalen Coin Edge zilver",
+        val CHAPTER_RINGS = arrayOf(
+            IndividualPart(
+                "Stalen chapter ring zwart",
+                16.50,
+                R.drawable.chapter_ring_polished_black,
+            ),
+            IndividualPart(
+                "Stalen chapter ring zilver",
+                16.50,
+                R.drawable.chapter_ring_polished_steel_silver,
+            ),
+            IndividualPart(
+                "Basic chapter ring zwart met wit",
+                16.50,
+                R.drawable.chapter_ring_markers_black,
+            ),
+            IndividualPart(
+                "Basic chapter ring zwart",
+                16.50,
+                R.drawable.chapter_ring_markers_black_on_black,
+            ),
+            IndividualPart(
+                "60Min chapter ring zwart",
+                16.50,
+                R.drawable.chapter_ring_60_black,
+            ),
+            IndividualPart(
+                "60Min chapter ring wit",
+                16.50,
+                R.drawable.chapter_ring_60_white
+            ),
         )
 
-        val BEZEL_PRICE = arrayOf(
-            30.50,
-            30.50,
-            30.50,
-            25.50,
-            25.50,
-            25.50,
+        val GLASS = arrayOf(
+            IndividualPart(
+                "Saffier glas Type-E",
+                28.50,
+                R.drawable.glass_sapphire_type_e,
+            ),
+            IndividualPart(
+                "Saffier glas plat",
+                37.50,
+                R.drawable.glass_sapphire_flat,
+            ),
+            IndividualPart(
+                "Saffier glas double dome",
+                37.50,
+                R.drawable.glass_sapphire_dd,
+            ),
+            IndividualPart(
+                "Saffier glas double dome NB",
+                37.50,
+                R.drawable.glass_sapphire_dd_nb,
+            ),
+            IndividualPart(
+                "Saffier glas top hat",
+                37.50,
+                R.drawable.glass_sapphire_top_hat
+            ),
         )
 
-        val BEZEL_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.bezel_brushed_steel,
-            R.drawable.bezel_brushed_black,
-            R.drawable.bezel_brushed_bronze,
-            R.drawable.bezel_deep_sea_silver,
-            R.drawable.bezel_deep_sea_black,
-            R.drawable.bezel_coin_edge_silver
+        val CROWNS = arrayOf(
+            IndividualPart(
+                "Stalen kroon zwart",
+                23.50,
+                R.drawable.crown_polished_steel_black,
+            ),
+            IndividualPart(
+                "Stalen kroon zilver",
+                23.50,
+                R.drawable.crown_steel_silver,
+            ),
+            IndividualPart(
+                "Stalen kroon brons",
+                23.50,
+                R.drawable.crown_steel_bronze,
+            ),
+            IndividualPart(
+                "Stalen kroon mat zwart",
+                23.50,
+                R.drawable.crown_steel_matt_black,
+            ),
+            IndividualPart(
+                "PVD kroon zwart",
+                23.50,
+                R.drawable.crown_pvd_black,
+            ),
+            IndividualPart(
+                "PVD kroon goud",
+                23.50,
+                R.drawable.crown_pvd_gold,
+            ),
         )
 
-        val INSERT_NAME = arrayOf(
-            "Yacht Master staal gun metal",
-            "Yacht Master staal blue",
-            "Dual Time staal zilver",
-            "Dual Time staal gun metal",
-            "Yacht Master keramisch zwart",
-            "Yacht Master keramisch goud",
-            "007 SMP zwart"
+        val CASES = arrayOf(
+            IndividualPart(
+                "Stalen kast zilver",
+                69.99,
+                R.drawable.case_polished_steel,
+            ),
+            IndividualPart(
+                "Stalen kast brons",
+                74.50,
+                R.drawable.case_steel_bronze,
+            ),
+            IndividualPart(
+                "Stalen kast zwart",
+                74.50,
+                R.drawable.case_steel_black,
+            ),
+            IndividualPart(
+                "Stalen kast goud",
+                74.50,
+                R.drawable.case_steel_gold,
+            ),
+            IndividualPart(
+                "Stalen kast rose gold",
+                68.50,
+                R.drawable.case_steel_rose_gold,
+            ),
         )
 
-        val INSERT_PRICE = arrayOf(
-            37.50,
-            37.50,
-            29.50,
-            29.50,
-            37.50,
-            37.50,
-            30.50
+        val DIALS = arrayOf(
+            IndividualPart(
+                "Voyager 2 zwart",
+                30.50,
+                R.drawable.dial_voyager_2_black,
+            ),
+            IndividualPart(
+                "Voyager 2 wit",
+                30.50,
+                R.drawable.dial_voyager_2_white,
+            ),
+            IndividualPart(
+                "Voyager 2 groen",
+                30.50,
+                R.drawable.dial_voyager_2_green,
+            ),
+            IndividualPart(
+                "Voyager 2 blauw",
+                30.50,
+                R.drawable.dial_voyager_2_blue,
+            ),
+            IndividualPart(
+                "Golf blauw",
+                17.50,
+                R.drawable.dial_wave_blue,
+            ),
+            IndividualPart(
+                "Kersen bloesem zilver",
+                73.50,
+                R.drawable.dial_cherry_blossom_silver,
+            ),
         )
 
-        val INSERT_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.insert_ym_steel_gun_metal,
-            R.drawable.insert_ym_steel_blue,
-            R.drawable.insert_dual_time_steel_silver,
-            R.drawable.insert_dual_time_steel_gun_metal,
-            R.drawable.insert_ym_ceramic_black,
-            R.drawable.insert_ym_ceramic_gold,
-            R.drawable.insert_007_smp_black
-        )
-
-        val CHAPTER_RING_NAME = arrayOf(
-            "Stalen chapter ring zwart",
-            "Stalen chapter ring zilver",
-            "Basic chapter ring zwart met wit",
-            "Basic chapter ring zwart",
-            "60Min chapter ring zwart",
-            "60Min chapter ring wit",
-        )
-
-        val CHAPTER_RING_PRICE = arrayOf(
-            16.50,
-            16.50,
-            16.50,
-            16.50,
-            16.50,
-            16.50
-        )
-
-        val CHAPTER_RING_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.chapter_ring_polished_black,
-            R.drawable.chapter_ring_polished_steel_silver,
-            R.drawable.chapter_ring_markers_black,
-            R.drawable.chapter_ring_markers_black_on_black,
-            R.drawable.chapter_ring_60_black,
-            R.drawable.chapter_ring_60_white
-        )
-
-        val GLASS_NAME = arrayOf(
-            "Saffier glas Type-E",
-            "Saffier glas plat",
-            "Saffier glas double dome",
-            "Saffier glas double dome NB",
-            "Saffier glas top hat"
-        )
-
-        val GLASS_PRICE = arrayOf(
-            28.50,
-            37.50,
-            37.50,
-            37.50,
-            37.50
-        )
-
-        val GLASS_RING_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.glass_sapphire_type_e,
-            R.drawable.glass_sapphire_flat,
-            R.drawable.glass_sapphire_dd,
-            R.drawable.glass_sapphire_dd_nb,
-            R.drawable.glass_sapphire_top_hat
-        )
-
-        val CROWN_NAME = arrayOf(
-            "Stalen kroon zwart",
-            "Stalen kroon zilver",
-            "Stalen kroon brons",
-            "Stalen kroon mat zwart",
-            "PVD kroon zwart",
-            "PVD kroon goud",
-        )
-
-        val CROWN_PRICE = arrayOf(
-            23.50,
-            23.50,
-            23.50,
-            23.50,
-            23.50,
-            23.50,
-        )
-
-        val CROWN_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.crown_polished_steel_black,
-            R.drawable.crown_steel_silver,
-            R.drawable.crown_steel_bronze,
-            R.drawable.crown_steel_matt_black,
-            R.drawable.crown_pvd_black,
-            R.drawable.crown_pvd_gold,
-        )
-
-
-        val CASE_NAME = arrayOf(
-            "Stalen kast zilver",
-            "Stalen kast brons",
-            "Stalen kast zwart",
-            "Stalen kast goud",
-            "Stalen kast rose gold",
-        )
-
-        val CASE_PRICE = arrayOf(
-            69.99,
-            74.50,
-            74.50,
-            74.50,
-            68.50,
-        )
-
-        val CASE_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.case_polished_steel,
-            R.drawable.case_steel_bronze,
-            R.drawable.case_steel_black,
-            R.drawable.case_steel_gold,
-            R.drawable.case_steel_rose_gold,
-        )
-
-        val DIAL_NAME = arrayOf(
-            "Voyager 2 zwart",
-            "Voyager 2 wit",
-            "Voyager 2 groen",
-            "Voyager 2 blauw",
-            "Golf blauw",
-            "Kersen bloesem zilver",
-        )
-
-        val DIAL_PRICE = arrayOf(
-            30.50,
-            30.50,
-            30.50,
-            30.50,
-            17.50,
-            73.50
-        )
-
-        val DIAL_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.dial_voyager_2_black,
-            R.drawable.dial_voyager_2_white,
-            R.drawable.dial_voyager_2_green,
-            R.drawable.dial_voyager_2_blue,
-            R.drawable.dial_wave_blue,
-            R.drawable.dial_cherry_blossom_silver,
-        )
-
-        val HANDS_NAME = arrayOf(
-            "Marine Master wijzers",
-            "Mercedes wijzers",
-            "Ranger wijzers",
-            "Mil-spec wijzers",
-            "Grand Seiko wijzers",
-            "Field Spec wijzers",
-        )
-
-        val HANDS_PRICE = arrayOf(
-            19.50,
-            19.50,
-            19.50,
-            19.50,
-            19.50,
-            19.50,
-        )
-
-        val HANDS_RES_DRAWABLE_IDS = arrayOf(
-            R.drawable.hands_mm_silver,
-            R.drawable.hands_merc,
-            R.drawable.hands_ranger,
-            R.drawable.hands_mil_spec,
-            R.drawable.hands_grand_seiko,
-            R.drawable.hands_field_spec
+        val HANDS = arrayOf(
+            IndividualPart(
+                "Marine Master wijzers",
+                19.50,
+                R.drawable.hands_mm_silver,
+            ),
+            IndividualPart(
+                "Mercedes wijzers",
+                19.50,
+                R.drawable.hands_merc,
+            ),
+            IndividualPart(
+                "Ranger wijzers",
+                19.50,
+                R.drawable.hands_ranger,
+            ),
+            IndividualPart(
+                "Mil-spec wijzers",
+                19.50,
+                R.drawable.hands_mil_spec,
+            ),
+            IndividualPart(
+                "Grand Seiko wijzers",
+                19.50,
+                R.drawable.hands_grand_seiko,
+            ),
+            IndividualPart(
+                "Field Spec wijzers",
+                19.50,
+                R.drawable.hands_field_spec
+            ),
         )
     }
 }
