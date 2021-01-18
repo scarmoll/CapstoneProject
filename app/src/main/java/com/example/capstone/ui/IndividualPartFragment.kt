@@ -55,123 +55,58 @@ class IndividualPartFragment : Fragment() {
 
         when (position) {
             0 -> {
-                for (i in IndividualPart.STRAP_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.STRAP_NAME[i],
-                            IndividualPart.STRAP_PRICE[i],
-                            IndividualPart.STRAP_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.STRAP_NAME, IndividualPart.STRAP_PRICE, IndividualPart.STRAP_RES_DRAWABLE_IDS)
             }
 
             1 -> {
-                for (i in IndividualPart.BEZEL_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.BEZEL_NAME[i],
-                            IndividualPart.BEZEL_PRICE[i],
-                            IndividualPart.BEZEL_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.BEZEL_NAME, IndividualPart.BEZEL_PRICE, IndividualPart.BEZEL_RES_DRAWABLE_IDS)
             }
 
             2 -> {
-                for (i in IndividualPart.INSERT_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.INSERT_NAME[i],
-                            IndividualPart.INSERT_PRICE[i],
-                            IndividualPart.INSERT_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.INSERT_NAME, IndividualPart.INSERT_PRICE, IndividualPart.INSERT_RES_DRAWABLE_IDS)
             }
 
             3 -> {
-                for (i in IndividualPart.CHAPTER_RING_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.CHAPTER_RING_NAME[i],
-                            IndividualPart.CHAPTER_RING_PRICE[i],
-                            IndividualPart.CHAPTER_RING_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.CHAPTER_RING_NAME, IndividualPart.CHAPTER_RING_PRICE, IndividualPart.CHAPTER_RING_RES_DRAWABLE_IDS)
             }
 
             4 -> {
-                for (i in IndividualPart.GLASS_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.GLASS_NAME[i],
-                            IndividualPart.GLASS_PRICE[i],
-                            IndividualPart.GLASS_RING_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.GLASS_NAME, IndividualPart.GLASS_PRICE, IndividualPart.GLASS_RING_RES_DRAWABLE_IDS)
             }
 
             5 -> {
-                for (i in IndividualPart.CROWN_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.CROWN_NAME[i],
-                            IndividualPart.CROWN_PRICE[i],
-                            IndividualPart.CROWN_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.CROWN_NAME, IndividualPart.CROWN_PRICE, IndividualPart.CROWN_RES_DRAWABLE_IDS)
             }
 
             6 -> {
-                for (i in IndividualPart.CASE_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.CASE_NAME[i],
-                            IndividualPart.CASE_PRICE[i],
-                            IndividualPart.CASE_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.CASE_NAME, IndividualPart.CASE_PRICE, IndividualPart.CASE_RES_DRAWABLE_IDS)
             }
 
             7 -> {
-                for (i in IndividualPart.DIAL_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.DIAL_NAME[i],
-                            IndividualPart.DIAL_PRICE[i],
-                            IndividualPart.DIAL_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.DIAL_NAME, IndividualPart.DIAL_PRICE, IndividualPart.DIAL_RES_DRAWABLE_IDS)
             }
 
             8 -> {
-                for (i in IndividualPart.HANDS_NAME.indices) {
-                    individualPartList.add(
-                        IndividualPart(
-                            IndividualPart.HANDS_NAME[i],
-                            IndividualPart.HANDS_PRICE[i],
-                            IndividualPart.HANDS_RES_DRAWABLE_IDS[i]
-                        )
-                    )
-                }
+                populateIndividualList(IndividualPart.HANDS_NAME, IndividualPart.HANDS_PRICE, IndividualPart.HANDS_RES_DRAWABLE_IDS)
             }
         }
 
-//        for (i in IndividualPart.NAME.indices) {
-//            individualPartList.add(
-//                IndividualPart(
-//                    IndividualPart.NAME[i],
-//                    IndividualPart.PRICE[i]
-//                )
-//            )
-//        }
-
         individualPartListAdapter.notifyDataSetChanged()
+    }
+
+    private fun populateIndividualList(
+        partName: Array<String>,
+        partPrice: Array<Double>,
+        partResDrawableIds: Array<Int>
+    ) {
+        for (i in partName.indices) {
+            individualPartList.add(
+                IndividualPart(
+                    partName[i],
+                    partPrice[i],
+                    partResDrawableIds[i]
+                )
+            )
+        }
     }
 }
